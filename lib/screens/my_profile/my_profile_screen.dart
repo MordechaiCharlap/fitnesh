@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyProfile extends StatelessWidget {
-  const MyProfile({super.key});
+class MyProfileScreen extends StatelessWidget {
+  const MyProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Center(child: Text("MyProfile"));
   }
 }

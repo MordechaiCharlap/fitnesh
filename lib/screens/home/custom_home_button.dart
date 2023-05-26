@@ -10,6 +10,6 @@ class CustomHomeButton extends StatefulWidget {
 class _CustomHomeButtonState extends State<CustomHomeButton> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Text("HomeButton");
   }
 }
