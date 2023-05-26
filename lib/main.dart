@@ -1,4 +1,8 @@
+import 'package:fitnesh/screens/chats/chats_screen.dart';
+import 'package:fitnesh/screens/explore/explore_screen.dart';
 import 'package:fitnesh/screens/home/home_screen.dart';
+import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';
+import 'package:fitnesh/screens/my_profile/my_profile_screen.dart';
 import 'package:fitnesh/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -6,17 +10,37 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 2;
+
+  void _onItemSelected(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        bottomNavigationBar: CustomBottomNavigationBar(),
+        bottomNavigationBar: CustomBottomNavigationBar(
+            selectedIndex: _selectedIndex, onItemSelected: _onItemSelected),
         body: IndexedStack(
-          index: 0,
-          children: [HomeScreen()],
+          index: _selectedIndex,
+          children: const [
+            MyProfileScreen(),
+            LeaderboardScreen(),
+            HomeScreen(),
+            ChatsScreen(),
+            ExploreScreen()
+          ],
         ),
       ),
     );
