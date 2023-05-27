@@ -1,15 +1,26 @@
+import 'package:fitnesh/screens/chats/chats_screen.dart';
+import 'package:fitnesh/screens/explore/explore_screen.dart';
+import 'package:fitnesh/screens/home/home_screen.dart';
+import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';
+import 'package:fitnesh/screens/my_profile/my_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   final int selectedIndex;
-  final Function(int) onItemSelected;
-  const CustomBottomNavigationBar(
-      {super.key, required this.selectedIndex, required this.onItemSelected});
+  const CustomBottomNavigationBar({super.key, required this.selectedIndex});
 
   @override
   State<CustomBottomNavigationBar> createState() =>
       _CustomBottomNavigationBarState();
 }
+
+List<Widget> mainScreens = const [
+  MyProfileScreen(),
+  LeaderboardScreen(),
+  HomeScreen(),
+  ChatsScreen(),
+  ExploreScreen()
+];
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final TextStyle _labelStyle = const TextStyle(fontSize: 12);
@@ -25,13 +36,22 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         BottomNavigationBarItem(
             icon: Icon(Icons.travel_explore), label: "Explore"),
       ],
-      currentIndex: widget.selectedIndex,
-      selectedItemColor: Colors.black,
+      currentIndex: widget.selectedIndex != -1 ? widget.selectedIndex : 0,
+      selectedItemColor:
+          widget.selectedIndex != -1 ? Colors.black : Colors.black54,
       unselectedItemColor: Colors.black54,
       showUnselectedLabels: false,
       type: BottomNavigationBarType.fixed,
       selectedLabelStyle: _labelStyle,
-      onTap: widget.onItemSelected,
+      onTap: (index) {
+        // Handle navigation bar item selection
+        if ((widget.selectedIndex != -1 && index != widget.selectedIndex) ||
+            widget.selectedIndex == -1) {
+          // Only trigger onItemSelected callback if the selected index is different
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => mainScreens[index]));
+        }
+      },
     );
   }
 }
