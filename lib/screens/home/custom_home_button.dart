@@ -10,6 +10,9 @@ class CustomHomeButton extends StatefulWidget {
 class _CustomHomeButtonState extends State<CustomHomeButton> {
   @override
   Widget build(BuildContext context) {
-    return const Text("HomeButton");
+    return ElevatedButton(
+      onPressed: () {},
+      child: const Text("HomeButton"),
+    );
   }
 }
