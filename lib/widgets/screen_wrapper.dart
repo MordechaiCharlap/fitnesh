@@ -8,7 +8,7 @@ class ScreenWrapper extends StatelessWidget {
   const ScreenWrapper({
     Key? key,
     required this.content,
-    required this.selectedIndex,
+    this.selectedIndex = -1,
     this.showNavBar = true,
   }) : super(key: key);
 
