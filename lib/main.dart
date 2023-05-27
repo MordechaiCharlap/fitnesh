@@ -30,8 +30,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        bottomNavigationBar: CustomBottomNavigationBar(
-            selectedIndex: _selectedIndex, onItemSelected: _onItemSelected),
+        bottomNavigationBar:
+            CustomBottomNavigationBar(selectedIndex: _selectedIndex),
         body: IndexedStack(
           index: _selectedIndex,
           children: const [
