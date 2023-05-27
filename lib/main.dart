@@ -3,7 +3,6 @@ import 'package:fitnesh/screens/explore/explore_screen.dart';
 import 'package:fitnesh/screens/home/home_screen.dart';
 import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';
 import 'package:fitnesh/screens/my_profile/my_profile_screen.dart';
-import 'package:fitnesh/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,20 +17,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _selectedIndex = 2;
-
-  void _onItemSelected(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  final int _selectedIndex = 2;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        bottomNavigationBar:
-            CustomBottomNavigationBar(selectedIndex: _selectedIndex),
         body: IndexedStack(
           index: _selectedIndex,
           children: const [
