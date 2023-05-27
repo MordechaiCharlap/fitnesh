@@ -3,6 +3,7 @@ import 'package:fitnesh/screens/explore/explore_screen.dart';
 import 'package:fitnesh/screens/home/home_screen.dart';
 import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';
 import 'package:fitnesh/screens/my_profile/my_profile_screen.dart';
+import 'package:fitnesh/utils/navigation_utils.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -46,21 +47,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         // Handle navigation bar item selection
         if ((widget.selectedIndex != -1 && index != widget.selectedIndex) ||
             widget.selectedIndex == -1) {
-          // Only trigger onItemSelected callback if the selected index is different
-
-          Navigator.push(
-            context,
-            PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  mainScreens[index],
-              transitionDuration:
-                  Duration.zero, // Set the transition duration to zero
-              transitionsBuilder:
-                  (context, animation, secondaryAnimation, child) {
-                return child; // No animation transition, return the child directly
-              },
-            ),
-          );
+          navigate(context, mainScreens[index]);
         }
       },
     );
