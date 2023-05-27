@@ -1,3 +1,4 @@
+import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -10,6 +11,7 @@ class ChatsScreen extends StatefulWidget {
 class _ChatsScreenState extends State<ChatsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Chats"));
+    return const ScreenWrapper(
+        content: Center(child: Text("Chats")), selectedIndex: 3);
   }
 }

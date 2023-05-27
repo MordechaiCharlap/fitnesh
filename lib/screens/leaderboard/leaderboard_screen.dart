@@ -1,3 +1,4 @@
+import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class LeaderboardScreen extends StatelessWidget {
@@ -5,6 +6,11 @@ class LeaderboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Leaderboard"));
+    return const ScreenWrapper(
+        content: Center(
+          child: Text("Leaderboard"),
+        ),
+        selectedIndex: 1,
+        showNavBar: true);
   }
 }

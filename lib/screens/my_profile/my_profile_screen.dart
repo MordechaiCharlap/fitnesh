@@ -1,3 +1,4 @@
+import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class MyProfileScreen extends StatelessWidget {
@@ -5,6 +6,10 @@ class MyProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("MyProfile"));
+    return const ScreenWrapper(
+        content: Center(
+          child: Text("MyProfile"),
+        ),
+        selectedIndex: 0);
   }
 }

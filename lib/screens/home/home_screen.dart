@@ -1,4 +1,5 @@
 import 'package:fitnesh/screens/home/custom_home_button.dart';
+import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,17 +7,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [
-      Column(children: [
-        CustomHomeButton(),
-        CustomHomeButton(),
-        CustomHomeButton()
-      ]),
-      Column(children: [
-        CustomHomeButton(),
-        CustomHomeButton(),
-        CustomHomeButton()
-      ])
-    ]);
+    return const ScreenWrapper(
+        content: Row(children: [
+          Column(children: [
+            CustomHomeButton(),
+            CustomHomeButton(),
+            CustomHomeButton(),
+          ]),
+          Column(children: [
+            CustomHomeButton(),
+            CustomHomeButton(),
+            CustomHomeButton(),
+          ])
+        ]),
+        selectedIndex: 2);
   }
 }
