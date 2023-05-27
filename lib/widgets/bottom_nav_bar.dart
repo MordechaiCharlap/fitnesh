@@ -40,7 +40,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       selectedItemColor:
           widget.selectedIndex != -1 ? Colors.black : Colors.black54,
       unselectedItemColor: Colors.black54,
-      showUnselectedLabels: false,
       type: BottomNavigationBarType.fixed,
       selectedLabelStyle: _labelStyle,
       onTap: (index) {
@@ -48,8 +47,20 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         if ((widget.selectedIndex != -1 && index != widget.selectedIndex) ||
             widget.selectedIndex == -1) {
           // Only trigger onItemSelected callback if the selected index is different
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => mainScreens[index]));
+
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  mainScreens[index],
+              transitionDuration:
+                  Duration.zero, // Set the transition duration to zero
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return child; // No animation transition, return the child directly
+              },
+            ),
+          );
         }
       },
     );
