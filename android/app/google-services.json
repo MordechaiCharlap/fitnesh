@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1025957601476:android:2d3d6d0b8a215539162991",
+        "mobilesdk_app_id": "1:1025957601476:android:a194c411276ce41b162991",
         "android_client_info": {
           "package_name": "com.charlap.fitnesh"
         }
@@ -29,6 +29,13 @@
             {
               "client_id": "1025957601476-blqk4ij2k8u8sb0h3a7ig7ctt5sao6bc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1025957601476-k55kd2h13c9mmu0qhktccr85fsg2qbq2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitnesh.RunnerTests"
+              }
             }
           ]
         }
