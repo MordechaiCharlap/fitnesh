@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1025957601476",
+    "project_id": "fitnesh-f1592",
+    "storage_bucket": "fitnesh-f1592.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025957601476:android:2d3d6d0b8a215539162991",
+        "android_client_info": {
+          "package_name": "com.example.fitnesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025957601476-blqk4ij2k8u8sb0h3a7ig7ctt5sao6bc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr782XQG25rfHsfB6chr5jjbsjdvOKyzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025957601476-blqk4ij2k8u8sb0h3a7ig7ctt5sao6bc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
