@@ -1,3 +1,4 @@
+import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutInvitesScreen extends StatefulWidget {
@@ -10,6 +11,10 @@ class WorkoutInvitesScreen extends StatefulWidget {
 class _WorkoutInvitesScreenState extends State<WorkoutInvitesScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const ScreenWrapper(
+      content: Center(
+        child: Text("WORKOUT INVITES"),
+      ),
+    );
   }
 }
