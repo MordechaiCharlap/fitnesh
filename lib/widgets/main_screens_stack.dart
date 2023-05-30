@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fitnesh/screens/chats_screen.dart';
-import 'package:fitnesh/screens/explore_screen.dart';
-import 'package:fitnesh/screens/home_screen.dart';
-import 'package:fitnesh/screens/leaderboard_screen.dart';
-import 'package:fitnesh/screens/my_profile_screen.dart';
+import 'package:fitnesh/screens/chats.dart';
+import 'package:fitnesh/screens/explore.dart';
+import 'package:fitnesh/screens/home.dart';
+import 'package:fitnesh/screens/leaderboard.dart';
+import 'package:fitnesh/screens/my_profile.dart';
 
 class MainScreens extends StatelessWidget {
   const MainScreens({super.key});

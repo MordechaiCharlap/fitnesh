@@ -1,8 +1,8 @@
 import 'package:fitnesh/screens/create_workout.dart';
 import 'package:fitnesh/screens/friends_workout.dart';
 import 'package:fitnesh/widgets/custom_home_button.dart';
-import 'package:fitnesh/screens/past_workouts_screen.dart';
-import 'package:fitnesh/screens/planned_workouts_screen.dart';
+import 'package:fitnesh/screens/past_workouts.dart';
+import 'package:fitnesh/screens/planned_workouts.dart';
 import 'package:fitnesh/screens/search_workouts.dart';
 import 'package:fitnesh/screens/workout_invites.dart';
 import 'package:fitnesh/widgets/screen_wrapper.dart';
