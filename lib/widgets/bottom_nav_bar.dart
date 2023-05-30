@@ -1,4 +1,4 @@
-import 'package:fitnesh/screens/chats/chats_screen.dart';
+import 'package:fitnesh/screens/chats_screen.dart';
 import 'package:fitnesh/screens/explore/explore_screen.dart';
 import 'package:fitnesh/screens/home/home_screen.dart';
 import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';

@@ -1,4 +1,4 @@
-import 'package:fitnesh/screens/create_workout/create_workout.dart';
+import 'package:fitnesh/screens/create_workout.dart';
 import 'package:fitnesh/screens/friends_workouts/friends_workout.dart';
 import 'package:fitnesh/screens/home/custom_home_button.dart';
 import 'package:fitnesh/screens/past_workouts/past_workouts_screen.dart';
