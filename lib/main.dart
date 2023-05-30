@@ -1,11 +1,25 @@
-import 'package:fitnesh/screens/chats/chats_screen.dart';
-import 'package:fitnesh/screens/explore/explore_screen.dart';
-import 'package:fitnesh/screens/home/home_screen.dart';
-import 'package:fitnesh/screens/leaderboard/leaderboard_screen.dart';
-import 'package:fitnesh/screens/my_profile/my_profile_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
+import 'package:fitnesh/widgets/main_screens_stack.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  debugPrint("test");
+  FirebaseFirestore db = FirebaseFirestore.instance;
+  final docRef = db.collection("test").doc("testDocument");
+  docRef.get().then(
+    (DocumentSnapshot doc) {
+      final data = doc.data() as Map<String, dynamic>;
+      debugPrint(data['testField']);
+    },
+    onError: (e) => debugPrint("Error getting document: $e"),
+  );
   runApp(const MyApp());
 }
 
@@ -17,24 +31,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final int _selectedIndex = 2;
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: IndexedStack(
-          index: _selectedIndex,
-          children: const [
-            MyProfileScreen(),
-            LeaderboardScreen(),
-            HomeScreen(),
-            ChatsScreen(),
-            ExploreScreen()
-          ],
-        ),
-      ),
+      home: MainScreens(),
     );
   }
 }
