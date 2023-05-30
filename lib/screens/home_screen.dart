@@ -1,10 +1,10 @@
 import 'package:fitnesh/screens/create_workout.dart';
-import 'package:fitnesh/screens/friends_workouts/friends_workout.dart';
-import 'package:fitnesh/screens/home/custom_home_button.dart';
-import 'package:fitnesh/screens/past_workouts/past_workouts_screen.dart';
-import 'package:fitnesh/screens/planned_workouts/planned_workouts_screen.dart';
-import 'package:fitnesh/screens/search_workouts/search_workouts.dart';
-import 'package:fitnesh/screens/workout_invites/workout_invites.dart';
+import 'package:fitnesh/screens/friends_workout.dart';
+import 'package:fitnesh/widgets/custom_home_button.dart';
+import 'package:fitnesh/screens/past_workouts_screen.dart';
+import 'package:fitnesh/screens/planned_workouts_screen.dart';
+import 'package:fitnesh/screens/search_workouts.dart';
+import 'package:fitnesh/screens/workout_invites.dart';
 import 'package:fitnesh/widgets/screen_wrapper.dart';
 import 'package:flutter/material.dart';
 
